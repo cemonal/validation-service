@@ -1,0 +1,8 @@
+recaptcha:
+  v2Endpoint: 'https://www.google.com/recaptcha/api/siteverify'
+  v2SecretKey: 'your-recaptcha-v2-secret-key'
+  v3Endpoint: 'https://www.google.com/recaptcha/api/siteverify'
+  v3SecretKey: 'your-recaptcha-v3-secret-key'
+  v3ScoreThreshold: 0.5
+  allowedIps:
+    - '*'
