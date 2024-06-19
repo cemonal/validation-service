@@ -1,5 +1,5 @@
 package com.cemonal.validationservice.domain.port;
 
-public interface QueryHandler<Query, Result> {
-    Result handle(Query query);
+public interface QueryHandler<Q, R> {
+    R handle(Q query);
 }
