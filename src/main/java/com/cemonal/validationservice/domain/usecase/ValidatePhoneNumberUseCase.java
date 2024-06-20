@@ -20,7 +20,7 @@ public class ValidatePhoneNumberUseCase {
       throw new IllegalArgumentException("Phone number must not be empty");
     }
 
-    boolean isValid = phoneNumberValidationPort.validate(phoneNumber, regionIso2);
+    boolean isValid = phoneNumberValidationPort.validate(phoneNumber, regionIso2.toUpperCase());
     return new PhoneNumberValidationResult(
         isValid,
         Collections.singletonList(isValid ? "Valid phone number" : "Invalid phone number"));
