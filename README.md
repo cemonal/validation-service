@@ -9,6 +9,7 @@ Validation Service is a Spring Boot application designed to handle multiple vali
     - Disposable email check
     - MX record check
     - reCAPTCHA v2 and v3 validation
+    - Phone number validation
 - Centralized configuration for validation providers.
 - Logging of requests, responses, and exceptions.
 
@@ -83,7 +84,7 @@ recaptcha:
       ```json
       {
         "success": true,
-        "errors": []
+        "messages": []
       }
       ```
 
@@ -128,6 +129,31 @@ recaptcha:
         "messages": []
       }
       ```
+- **Phone Number Validation Endpoint**
+    - **URL**: `/api/v1/phone-number-validation`
+    - **Method**: `POST`
+    - **Request Body**:
+      ```json
+      {
+        "phoneNumber": "+14155552671",
+        "regionIso2": "US"
+      }
+      ```
+    - **Response**:
+      ```json
+      {
+        "success": true,
+        "messages": [
+          "Valid phone number"
+        ]
+      }
+      ```
 ### Swagger UI
 
 The application includes Swagger UI for API documentation. You can access it at `/swagger-ui.html`.
+
+## Contributing
+
+We welcome contributions! If you would like to contribute, please fork the repository, create a new branch, make your changes, and open a pull request.
+
+Thank you for your contributions!

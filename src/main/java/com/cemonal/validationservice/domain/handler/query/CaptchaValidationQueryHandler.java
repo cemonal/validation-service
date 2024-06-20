@@ -1,12 +1,14 @@
 package com.cemonal.validationservice.domain.handler.query;
 
 import com.cemonal.validationservice.domain.model.CaptchaValidationResult;
+import com.cemonal.validationservice.domain.port.QueryHandler;
 import com.cemonal.validationservice.domain.query.CaptchaValidationQuery;
 import com.cemonal.validationservice.domain.usecase.ValidateCaptchaUseCase;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CaptchaValidationQueryHandler {
+public class CaptchaValidationQueryHandler
+    implements QueryHandler<CaptchaValidationQuery, CaptchaValidationResult> {
 
   private final ValidateCaptchaUseCase validationUseCase;
 
